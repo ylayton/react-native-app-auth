@@ -237,13 +237,13 @@ public class RNAppAuthModule extends ReactContextBaseJavaModule implements Activ
                 }
             };
 
-            if (this.clientSecret != null) {
-                ClientAuthentication clientAuth = new ClientSecretBasic(this.clientSecret);
-                authService.performTokenRequest(tokenRequest, clientAuth, tokenResponseCallback);
+            // if (this.clientSecret != null) {
+            //     ClientAuthentication clientAuth = new ClientSecretBasic(this.clientSecret);
+            //     authService.performTokenRequest(tokenRequest, clientAuth, tokenResponseCallback);
 
-            } else {
+            // } else {
                 authService.performTokenRequest(tokenRequest, tokenResponseCallback);
-            }
+            // }
 
         }
     }
@@ -371,13 +371,13 @@ public class RNAppAuthModule extends ReactContextBaseJavaModule implements Activ
         };
 
 
-        if (clientSecret != null) {
-            ClientAuthentication clientAuth = new ClientSecretBasic(clientSecret);
-            authService.performTokenRequest(tokenRequest, clientAuth, tokenResponseCallback);
+        // if (clientSecret != null) {
+        //     ClientAuthentication clientAuth = new ClientSecretBasic(clientSecret);
+        //     authService.performTokenRequest(tokenRequest, clientAuth, tokenResponseCallback);
 
-        } else {
+        // } else {
             authService.performTokenRequest(tokenRequest, tokenResponseCallback);
-        }
+        // }
     }
 
     /*
